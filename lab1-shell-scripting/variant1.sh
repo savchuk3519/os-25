@@ -13,5 +13,5 @@ if [ ! -d "$directory" ]; then
     exit 1
 fi
 
-find "$directory" -type f -name "${filename}.*" -printf '%h\n' | xargs n 1 basename | sort -u
+find "$directory" -type f -name "${filename}.*" -printf '%h\n' | xargs -n 1 basename | sort -u
 
